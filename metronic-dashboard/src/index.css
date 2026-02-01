@@ -4,11 +4,11 @@
 
 @layer base {
   * {
-    @apply border-gray-200;
+    @apply border-gray-200 dark:border-gray-700;
   }
   
   body {
-    @apply bg-gray-50 text-gray-900 font-sans antialiased;
+    @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans antialiased transition-colors duration-200;
   }
 
   /* Custom scrollbar */
@@ -32,7 +32,7 @@
 
 @layer components {
   .card {
-    @apply bg-white rounded-xl shadow-card border border-gray-100;
+    @apply bg-white dark:bg-gray-800 rounded-xl shadow-card border border-gray-100 dark:border-gray-700 transition-colors duration-200;
   }
 
   .card-body {
@@ -40,7 +40,7 @@
   }
 
   .card-header {
-    @apply px-6 py-4 border-b border-gray-100 flex items-center justify-between;
+    @apply px-6 py-4 border-b border-gray-100 dark:border-gray-700 flex items-center justify-between;
   }
 
   .btn {
