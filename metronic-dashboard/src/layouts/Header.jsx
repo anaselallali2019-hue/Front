@@ -12,9 +12,10 @@ import {
   Globe,
 } from 'lucide-react';
 import { useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Header({ onMenuClick }) {
-  const [darkMode, setDarkMode] = useState(false);
+  const { darkMode, toggleDarkMode } = useTheme();
   const [showNotifications, setShowNotifications] = useState(false);
   const [showProfile, setShowProfile] = useState(false);
 
@@ -82,11 +83,11 @@ export default function Header({ onMenuClick }) {
 
           {/* Dark Mode Toggle */}
           <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+            onClick={toggleDarkMode}
+            className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
           >
             {darkMode ? (
-              <Sun size={20} className="text-gray-600" />
+              <Sun size={20} className="text-gray-600 dark:text-gray-400" />
             ) : (
               <Moon size={20} className="text-gray-600" />
             )}
