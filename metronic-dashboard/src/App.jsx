@@ -29,6 +29,9 @@ import UserProfile from './pages/profiles/UserProfile';
 // Billing
 import Plans from './pages/billing/Plans';
 
+// Demo
+import ComponentsDemo from './pages/ComponentsDemo';
+
 // Auth
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
@@ -78,6 +81,9 @@ function App() {
           
           {/* Billing */}
           <Route path="billing/plans" element={<Plans />} />
+          
+          {/* Demo */}
+          <Route path="components-demo" element={<ComponentsDemo />} />
           
           {/* Management */}
           <Route path="projects" element={<Projects />} />
