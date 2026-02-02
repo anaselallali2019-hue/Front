@@ -1,0 +1,126 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import MainLayout from './layouts/MainLayout';
+
+// Dashboards
+import DefaultDashboard from './pages/dashboards/DefaultDashboard';
+import MarketingDashboard from './pages/dashboards/MarketingDashboard';
+
+// E-commerce
+import Products from './pages/ecommerce/Products';
+import Orders from './pages/ecommerce/Orders';
+
+// Apps
+import Chat from './pages/apps/Chat';
+import Email from './pages/apps/Email';
+import Calendar from './pages/apps/Calendar';
+import FileManager from './pages/apps/FileManager';
+
+// Management
+import Projects from './pages/Projects';
+import Invoices from './pages/Invoices';
+import Team from './pages/Team';
+
+// Users
+import UsersList from './pages/users/UsersList';
+
+// Profiles
+import UserProfile from './pages/profiles/UserProfile';
+
+// Billing
+import Plans from './pages/billing/Plans';
+
+// Demo & Showcase
+import ComponentsDemo from './pages/ComponentsDemo';
+import SearchPage from './pages/SearchPage';
+import WidgetsShowcase from './pages/WidgetsShowcase';
+import DataTableDemo from './pages/DataTableDemo';
+import AccountSettings from './pages/AccountSettings';
+import FinanceDashboard from './pages/dashboards/FinanceDashboard';
+import ProjectsDashboard from './pages/dashboards/ProjectsDashboard';
+import RolesPermissions from './pages/users/RolesPermissions';
+
+// Auth
+import SignIn from './pages/auth/SignIn';
+import SignUp from './pages/auth/SignUp';
+import TwoFactorAuth from './pages/auth/TwoFactorAuth';
+import PasswordReset from './pages/auth/PasswordReset';
+
+// Errors
+import Error404 from './pages/errors/Error404';
+import Error500 from './pages/errors/Error500';
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        {/* Auth Routes */}
+        <Route path="/auth/sign-in" element={<SignIn />} />
+        <Route path="/auth/sign-up" element={<SignUp />} />
+        <Route path="/auth/two-factor" element={<TwoFactorAuth />} />
+        <Route path="/auth/reset-password" element={<PasswordReset />} />
+        
+        {/* Error Pages */}
+        <Route path="/errors/404" element={<Error404 />} />
+        <Route path="/errors/500" element={<Error500 />} />
+        
+        {/* Main App */}
+        <Route path="/" element={<MainLayout />}>
+          {/* Dashboards */}
+          <Route index element={<DefaultDashboard />} />
+          <Route path="dashboards/analytics" element={<DefaultDashboard />} />
+          <Route path="dashboards/ecommerce" element={<DefaultDashboard />} />
+          <Route path="dashboards/marketing" element={<MarketingDashboard />} />
+          <Route path="dashboards/finance" element={<FinanceDashboard />} />
+          <Route path="dashboards/projects" element={<ProjectsDashboard />} />
+          
+          {/* E-commerce */}
+          <Route path="ecommerce/products" element={<Products />} />
+          <Route path="ecommerce/orders" element={<Orders />} />
+          <Route path="ecommerce/customers" element={<Team />} />
+          <Route path="ecommerce/reports" element={<DefaultDashboard />} />
+          
+          {/* Apps */}
+          <Route path="apps/chat" element={<Chat />} />
+          <Route path="apps/email" element={<Email />} />
+          <Route path="apps/calendar" element={<Calendar />} />
+          <Route path="apps/files" element={<FileManager />} />
+          
+          {/* Users */}
+          <Route path="users/list" element={<UsersList />} />
+          <Route path="users/view/:id" element={<UserProfile />} />
+          <Route path="users/roles" element={<RolesPermissions />} />
+          
+          {/* Profiles */}
+          <Route path="profile" element={<UserProfile />} />
+          
+          {/* Billing */}
+          <Route path="billing/plans" element={<Plans />} />
+          
+          {/* Demo & Showcase */}
+          <Route path="components-demo" element={<ComponentsDemo />} />
+          <Route path="datatable-demo" element={<DataTableDemo />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="widgets" element={<WidgetsShowcase />} />
+          
+          {/* Account */}
+          <Route path="account/settings" element={<AccountSettings />} />
+          
+          {/* Management */}
+          <Route path="projects" element={<Projects />} />
+          <Route path="tasks" element={<Projects />} />
+          <Route path="invoices" element={<Invoices />} />
+          <Route path="team" element={<Team />} />
+          
+          {/* Settings */}
+          <Route path="settings" element={<DefaultDashboard />} />
+          <Route path="help" element={<DefaultDashboard />} />
+        </Route>
+        
+        {/* Catch all */}
+        <Route path="*" element={<Error404 />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
