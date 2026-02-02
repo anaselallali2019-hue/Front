@@ -18,6 +18,11 @@ import {
   HelpCircle,
   ChevronDown,
   ChevronRight,
+  Search,
+  Grid,
+  DollarSign,
+  UserCircle,
+  CreditCard,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -28,6 +33,8 @@ const menuItems = [
       { icon: LayoutDashboard, label: 'Default', path: '/' },
       { icon: TrendingUp, label: 'Analytics', path: '/dashboards/analytics' },
       { icon: ShoppingCart, label: 'E-commerce', path: '/dashboards/ecommerce' },
+      { icon: BarChart3, label: 'Marketing', path: '/dashboards/marketing' },
+      { icon: DollarSign, label: 'Finance', path: '/dashboards/finance' },
     ],
   },
   {
@@ -58,9 +65,20 @@ const menuItems = [
     ],
   },
   {
-    section: 'Settings',
+    section: 'User & Account',
     items: [
-      { icon: Settings, label: 'Settings', path: '/settings' },
+      { icon: Users, label: 'Users List', path: '/users/list' },
+      { icon: UserCircle, label: 'Profile', path: '/profile' },
+      { icon: Settings, label: 'Account Settings', path: '/account/settings' },
+      { icon: CreditCard, label: 'Plans & Billing', path: '/billing/plans' },
+    ],
+  },
+  {
+    section: 'Other Pages',
+    items: [
+      { icon: Search, label: 'Search', path: '/search' },
+      { icon: Grid, label: 'Widgets', path: '/widgets' },
+      { icon: FileText, label: 'Components Demo', path: '/components-demo' },
       { icon: HelpCircle, label: 'Help & Support', path: '/help' },
     ],
   },

@@ -29,8 +29,12 @@ import UserProfile from './pages/profiles/UserProfile';
 // Billing
 import Plans from './pages/billing/Plans';
 
-// Demo
+// Demo & Showcase
 import ComponentsDemo from './pages/ComponentsDemo';
+import SearchPage from './pages/SearchPage';
+import WidgetsShowcase from './pages/WidgetsShowcase';
+import AccountSettings from './pages/AccountSettings';
+import FinanceDashboard from './pages/dashboards/FinanceDashboard';
 
 // Auth
 import SignIn from './pages/auth/SignIn';
@@ -59,6 +63,7 @@ function App() {
           <Route path="dashboards/analytics" element={<DefaultDashboard />} />
           <Route path="dashboards/ecommerce" element={<DefaultDashboard />} />
           <Route path="dashboards/marketing" element={<MarketingDashboard />} />
+          <Route path="dashboards/finance" element={<FinanceDashboard />} />
           
           {/* E-commerce */}
           <Route path="ecommerce/products" element={<Products />} />
@@ -82,8 +87,13 @@ function App() {
           {/* Billing */}
           <Route path="billing/plans" element={<Plans />} />
           
-          {/* Demo */}
+          {/* Demo & Showcase */}
           <Route path="components-demo" element={<ComponentsDemo />} />
+          <Route path="search" element={<SearchPage />} />
+          <Route path="widgets" element={<WidgetsShowcase />} />
+          
+          {/* Account */}
+          <Route path="account/settings" element={<AccountSettings />} />
           
           {/* Management */}
           <Route path="projects" element={<Projects />} />
