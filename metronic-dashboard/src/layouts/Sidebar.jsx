@@ -23,6 +23,8 @@ import {
   DollarSign,
   UserCircle,
   CreditCard,
+  Shield,
+  Table2,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -35,6 +37,7 @@ const menuItems = [
       { icon: ShoppingCart, label: 'E-commerce', path: '/dashboards/ecommerce' },
       { icon: BarChart3, label: 'Marketing', path: '/dashboards/marketing' },
       { icon: DollarSign, label: 'Finance', path: '/dashboards/finance' },
+      { icon: Briefcase, label: 'Projects', path: '/dashboards/projects' },
     ],
   },
   {
@@ -68,6 +71,7 @@ const menuItems = [
     section: 'User & Account',
     items: [
       { icon: Users, label: 'Users List', path: '/users/list' },
+      { icon: Shield, label: 'Roles & Permissions', path: '/users/roles' },
       { icon: UserCircle, label: 'Profile', path: '/profile' },
       { icon: Settings, label: 'Account Settings', path: '/account/settings' },
       { icon: CreditCard, label: 'Plans & Billing', path: '/billing/plans' },
@@ -79,6 +83,7 @@ const menuItems = [
       { icon: Search, label: 'Search', path: '/search' },
       { icon: Grid, label: 'Widgets', path: '/widgets' },
       { icon: FileText, label: 'Components Demo', path: '/components-demo' },
+      { icon: Table2, label: 'DataTable Demo', path: '/datatable-demo' },
       { icon: HelpCircle, label: 'Help & Support', path: '/help' },
     ],
   },

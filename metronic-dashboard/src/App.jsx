@@ -33,12 +33,17 @@ import Plans from './pages/billing/Plans';
 import ComponentsDemo from './pages/ComponentsDemo';
 import SearchPage from './pages/SearchPage';
 import WidgetsShowcase from './pages/WidgetsShowcase';
+import DataTableDemo from './pages/DataTableDemo';
 import AccountSettings from './pages/AccountSettings';
 import FinanceDashboard from './pages/dashboards/FinanceDashboard';
+import ProjectsDashboard from './pages/dashboards/ProjectsDashboard';
+import RolesPermissions from './pages/users/RolesPermissions';
 
 // Auth
 import SignIn from './pages/auth/SignIn';
 import SignUp from './pages/auth/SignUp';
+import TwoFactorAuth from './pages/auth/TwoFactorAuth';
+import PasswordReset from './pages/auth/PasswordReset';
 
 // Errors
 import Error404 from './pages/errors/Error404';
@@ -51,6 +56,8 @@ function App() {
         {/* Auth Routes */}
         <Route path="/auth/sign-in" element={<SignIn />} />
         <Route path="/auth/sign-up" element={<SignUp />} />
+        <Route path="/auth/two-factor" element={<TwoFactorAuth />} />
+        <Route path="/auth/reset-password" element={<PasswordReset />} />
         
         {/* Error Pages */}
         <Route path="/errors/404" element={<Error404 />} />
@@ -64,6 +71,7 @@ function App() {
           <Route path="dashboards/ecommerce" element={<DefaultDashboard />} />
           <Route path="dashboards/marketing" element={<MarketingDashboard />} />
           <Route path="dashboards/finance" element={<FinanceDashboard />} />
+          <Route path="dashboards/projects" element={<ProjectsDashboard />} />
           
           {/* E-commerce */}
           <Route path="ecommerce/products" element={<Products />} />
@@ -80,6 +88,7 @@ function App() {
           {/* Users */}
           <Route path="users/list" element={<UsersList />} />
           <Route path="users/view/:id" element={<UserProfile />} />
+          <Route path="users/roles" element={<RolesPermissions />} />
           
           {/* Profiles */}
           <Route path="profile" element={<UserProfile />} />
@@ -89,6 +98,7 @@ function App() {
           
           {/* Demo & Showcase */}
           <Route path="components-demo" element={<ComponentsDemo />} />
+          <Route path="datatable-demo" element={<DataTableDemo />} />
           <Route path="search" element={<SearchPage />} />
           <Route path="widgets" element={<WidgetsShowcase />} />
           
